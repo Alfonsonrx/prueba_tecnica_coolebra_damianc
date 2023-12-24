@@ -1,0 +1,11 @@
+1. La query utilizada (que esta siendo aprovechada desde el backend de este proyecto) es:
+  SELECT prod.name, prod.SKU, prod.ean, prod.market_id, 
+  CASE WHEN pri.active = 0 THEN pri.normal_price WHEN pri.active = 1 THEN pri.discount_price END AS menor_precio
+  FROM `product` AS prod JOIN `price` AS pri 
+  WHERE prod.SKU = pri.product_SKU;
+
+2. Un proceso de automatizacion que puedo pensar con la base de datos que se presenta, seria
+que una pagina web muestre en la pantalla principal, la cantidad de productos por cada mercado
+de forma que se pueda categorizar y se muestre a tiempo real, a esto se le podria agregar el dato
+de descuentos activos, y asi que los usuarios puedan estar al tanto que tipo de productos estan 
+teniendo mas descuentos en ese momento.
