@@ -33,8 +33,8 @@ Luego ir a la carpeta de `python_backend` y ejecutar los siguientes comandos par
 
 ```
 > python -m venv venv
-> ./venv/Script/activate
-> pip i -r ./requirements.txt
+> .\venv\Scripts\activate
+> pip install -r ./requirements.txt
 ```
 
 Con ello esta listo el entorno y puede correr el backend con:
